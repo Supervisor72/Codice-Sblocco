@@ -177,11 +177,6 @@
         <h1>🚚 Richiesta Codice Sblocco</h1>
         <p class="subtitle">Compila il modulo per richiedere il codice di sblocco consegne</p>
 
-        <div class="config-warning">
-            <strong>ℹ️ CONFIGURAZIONE</strong>
-            Inserisci il tuo username Telegram (es. <code>@tuousername</code>) nel codice JavaScript (riga 167) per ricevere i messaggi.
-        </div>
-
         <form id="deliveryForm">
             <div class="form-group">
                 <label for="puntoVendita">Punto Vendita *</label>
@@ -264,7 +259,11 @@
 🚛 Trasportatore: ${trasportatore}
 👤 Cliente: ${nomeCliente}
 
-⏰ ${new Date().toLocaleString('it-IT')}`;
+⏰ ${new Date().toLocaleString('it-IT')}
+
+---
+✍️ RISPOSTA (compila qui sotto):
+Codice di sblocco: _______`;
 
             // Codifica il messaggio per URL
             const encodedMessage = encodeURIComponent(message);
