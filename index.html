@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiesta Sblocco Consegne</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* Importante per il padding */
+            font-size: 16px;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #0088cc; /* Colore Telegram */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0077b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Richiesta Sblocco Consegne</h1>
+        <form id="requestForm">
+            
+            <div class="form-group">
+                <label for="puntoVendita">Punto Vendita</label>
+                <select id="puntoVendita" name="puntoVendita" required>
+                    <option value="">Seleziona un negozio...</option>
+                    <option value="FANO">FANO</option>
+                    <option value="MONSANO">MONSANO</option>
+                    <option value="OISMO">OISMO</option>
+                    <option value="MACERATA">MACERATA</option>
+                    <option value="CIVITANOVA">CIVITANOVA</option>
+                    <option value="PESARO">PESARO</option>
+                    <option value="FOLIGNO">FOLIGNO</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dataConsegna">Data Consegna</label>
+                <input type="date" id="dataConsegna" name="dataConsegna" required>
+            </div>
+
+            <div class="form-group">
+                <label for="trasportatore">Trasportatore</label>
+                <select id="trasportatore" name="trasportatore" required>
+                    <option value="">Seleziona un trasportatore...</option>
+                    <option value="GIOINTEC">GIOINTEC</option>
+                    <option value="VELTRAS">VELTRAS</option>
+                    <option value="FAST EST">FAST EST</option>
+                    <option value="B.F. SERVICE">B.F. SERVICE</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cliente">Cognome e Nome del Cliente</label>
+                <input type="text" id="cliente" name="cliente" placeholder="Es. Mario Bianchi" required>
+            </div>
+
+            <button type="submit">Invia Richiesta via Telegram</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
