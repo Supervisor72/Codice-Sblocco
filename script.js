@@ -1,7 +1,5 @@
-// ▼▼▼ MODIFICA QUI ▼▼▼
-// Inserisci il tuo username Telegram qui, senza la '@'
-const ilTuoUsernameTelegram = "IL_TUO_USERNAME";
-// ▲▲▲ MODIFICA QUI ▲▲▲
+// Username Telegram impostato
+const ilTuoUsernameTelegram = "Ottimista72";
 
 
 document.getElementById('requestForm').addEventListener('submit', function(event) {
